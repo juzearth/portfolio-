@@ -18,8 +18,8 @@ export const profile = {
     "I build billing systems, web apps and Android apps for Kenyan problems — M-Pesa payments, student services and everyday tools.",
   email: "peter@example.com", // TODO: your real email
   phone: "", // TODO: optional, e.g. "+254 7XX XXX XXX" (leave empty to hide)
-  github: "https://github.com/your-username", // TODO
-  linkedin: "https://linkedin.com/in/your-username", // TODO
+  github: "https://github.com/juzearth", // TODO
+  linkedin: "https://www.linkedin.com/in/peter-ochieng-a86b57396?utm_source=share_via&utm_content=profile&utm_medium=member_android", // TODO
   availability: "Open to freelance & remote work",
 };
 
@@ -54,8 +54,8 @@ export const projects = [
     description:
       "Billing and WiFi hotspot management system with a customer-facing hotspot portal and an admin side. Customers pay through M-Pesa STK Push.",
     technologies: ["React", "Node.js", "Express", "MySQL", "M-Pesa Daraja"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/juzearth",
+    liveUrl: "https://github.com/juzearth",
     featured: true,
   },
   {
@@ -65,8 +65,8 @@ export const projects = [
     description:
       "Student complaint platform with registration, session-based login, password recovery and a student dashboard, styled in a deep-blue split-panel UI.",
     technologies: ["PHP", "MySQLi", "Sessions", "JavaScript", "CSS"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/juzearth",
+    liveUrl: "https://github.com/juzearth",
     featured: true,
   },
   {
@@ -76,8 +76,8 @@ export const projects = [
     description:
       "WhatsApp Status saver built with Jetpack Compose and Material 3. Uses the Storage Access Framework and MediaStore, and supports Android 7 to 15.",
     technologies: ["Kotlin", "Jetpack Compose", "Material 3", "SAF", "MediaStore"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/juzearth",
+    liveUrl: "https://github.com/juzearth",
     featured: false,
   },
   {
@@ -87,8 +87,8 @@ export const projects = [
     description:
       "Android car rental app with user accounts and live booking data using Firebase Authentication and Realtime Database.",
     technologies: ["Kotlin", "Firebase Auth", "Realtime Database"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/juzearth",
+    liveUrl: "https://github.com/juzearth",
     featured: false,
   },
   {
@@ -98,8 +98,8 @@ export const projects = [
     description:
       "Full 15-page proposal for a Kenya-based grocery delivery platform: M-Pesa and SMS integration, Data Protection Act 2019 compliance, 12-month agile plan and costed budget.",
     technologies: ["System design", "M-Pesa Daraja", "Africa's Talking", "Agile"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/juzearth",
+    liveUrl: "https://github.com/juzearth",
     featured: false,
   },
 ];
