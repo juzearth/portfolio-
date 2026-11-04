@@ -1,0 +1,91 @@
+.nf { --teal: #2dd4d0; position: relative; min-height: 100svh; overflow: hidden; color: #e8eef7;
+  background: radial-gradient(120% 90% at 85% 0%, #1a1f3a 0%, #0a1226 45%, #050912 100%);
+  font-family: "Exo 2", Inter, system-ui, sans-serif; }
+.nf-display { font-family: "Orbitron", "Exo 2", system-ui, sans-serif; }
+
+/* ---------- space layers ---------- */
+.nf-stars { position: absolute; inset: 0; width: 100%; height: 100%; }
+.nf-stars circle { fill: #fff; }
+.nf-stars .tw { animation: nf-twinkle 3.5s ease-in-out infinite; }
+@keyframes nf-twinkle { 0%,100% { opacity: .25 } 50% { opacity: 1 } }
+
+.nf-sun { position: absolute; top: -26vmax; right: -24vmax; width: 62vmax; height: 62vmax; pointer-events: none;
+  background: radial-gradient(circle, #fff 0, #fff4da 3.5%, rgba(255,196,120,.85) 9%, rgba(224,120,50,.4) 22%, rgba(120,52,22,.14) 40%, transparent 62%);
+  animation: nf-glow 9s ease-in-out infinite; }
+@keyframes nf-glow { 0%,100% { opacity: .92; transform: scale(1) } 50% { opacity: 1; transform: scale(1.04) } }
+.nf-planet { position: absolute; top: 5vh; right: -9vmin; width: 36vmin; height: 36vmin; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 78% 24%, rgba(255,170,100,.55), rgba(70,36,28,.85) 45%, rgba(10,8,14,.95) 75%);
+  box-shadow: 0 0 40px 4px rgba(255,150,80,.25), inset 4px -2px 24px rgba(255,190,130,.3); opacity: .85; }
+
+.nf-earth { position: absolute; left: 50%; bottom: 0; width: 180vw; height: 74vh; border-radius: 50%; pointer-events: none;
+  transform: translate(-50%, 66%);
+  background: radial-gradient(ellipse at 50% 0%, #2263b8 0%, #0e3470 20%, #071a3c 52%, #030a1b 82%);
+  box-shadow: 0 -2px 5px 1px rgba(170,220,255,.95), 0 -16px 54px 8px rgba(70,150,255,.55), 0 -60px 150px 30px rgba(40,100,230,.25); }
+.nf-earth::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: repeating-linear-gradient(176deg, transparent 0 16px, rgba(255,255,255,.07) 17px 20px, transparent 21px 46px);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 0, transparent 38%); mask-image: radial-gradient(ellipse at 50% 0%, #000 0, transparent 38%); }
+.nf-earth::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: radial-gradient(ellipse at 86% 0%, rgba(255,170,110,.3), rgba(90,140,230,.12) 22%, transparent 40%); }
+.nf-vignette { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(0,0,0,.55) 100%); }
+
+.nf-shoot { position: absolute; width: 140px; height: 2px; opacity: 0; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.95)); transform: rotate(-24deg);
+  animation: nf-shoot 9s linear infinite; }
+@keyframes nf-shoot { 0% { opacity: 0; transform: translate(0,0) rotate(-24deg) }
+  2% { opacity: 1 } 9% { opacity: 0; transform: translate(-46vw, 20vw) rotate(-24deg) } 100% { opacity: 0 } }
+
+/* ---------- 404 number ---------- */
+.nf-num { position: relative; display: inline-flex; line-height: .9; letter-spacing: .02em; font-weight: 900;
+  font-size: clamp(5.5rem, 21vw, 16rem); user-select: none; }
+.nf-digit { background: linear-gradient(180deg, #ffffff 10%, #aeb7c6 100%); -webkit-background-clip: text; background-clip: text;
+  color: transparent; filter: drop-shadow(0 6px 24px rgba(0,0,0,.45)); }
+/* the middle "0" is shattered: random holes punched out of it */
+.nf-zero { -webkit-mask-image:
+    radial-gradient(circle at 78% 26%, transparent 0 7%, #000 7.5%),
+    radial-gradient(circle at 70% 62%, transparent 0 5.5%, #000 6%),
+    radial-gradient(circle at 88% 48%, transparent 0 4.5%, #000 5%),
+    radial-gradient(circle at 30% 80%, transparent 0 4%, #000 4.5%),
+    radial-gradient(circle at 56% 12%, transparent 0 3.5%, #000 4%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(circle at 78% 26%, transparent 0 7%, #000 7.5%),
+    radial-gradient(circle at 70% 62%, transparent 0 5.5%, #000 6%),
+    radial-gradient(circle at 88% 48%, transparent 0 4.5%, #000 5%),
+    radial-gradient(circle at 30% 80%, transparent 0 4%, #000 4.5%),
+    radial-gradient(circle at 56% 12%, transparent 0 3.5%, #000 4%);
+  mask-composite: intersect; }
+.nf-debris { position: absolute; background: #1b2230; opacity: .9; animation: nf-drift linear infinite;
+  box-shadow: inset 1px 1px 0 rgba(255,255,255,.18); }
+@keyframes nf-drift { 0% { transform: translate(0,0) rotate(0) } 50% { transform: translate(var(--dx), var(--dy)) rotate(180deg) }
+  100% { transform: translate(0,0) rotate(360deg) } }
+
+.nf-astro { position: absolute; left: 63%; top: 34%; width: 31%; min-width: 84px; pointer-events: none;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.55)); animation: nf-float 9s ease-in-out infinite; }
+@keyframes nf-float { 0%,100% { transform: translateY(0) rotate(-14deg) } 50% { transform: translateY(-3.4vmin) rotate(-8deg) } }
+
+/* ---------- text + controls ---------- */
+.nf-quote { text-shadow: 0 2px 18px rgba(0,0,0,.7); }
+.nf-btn { display: inline-flex; align-items: center; gap: .6rem; padding: .85rem 1.7rem; border-radius: 10px; font-size: .8rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: #dffcfb; border: 1.5px solid var(--teal);
+  background: rgba(14,38,52,.55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 0 rgba(45,212,208,.0), inset 0 0 18px rgba(45,212,208,.12); transition: all .35s ease; }
+.nf-btn:hover { background: rgba(45,212,208,.2); box-shadow: 0 0 28px 2px rgba(45,212,208,.45), inset 0 0 18px rgba(45,212,208,.2); transform: translateY(-2px); }
+.nf-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+.nf-side a { position: relative; display: flex; align-items: center; gap: .9rem; padding: .55rem 0; font-size: .72rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: rgba(232,238,247,.85); transition: color .25s; }
+.nf-side a::before { content: ""; display: block; width: 3.4rem; height: 1.5px; background: var(--teal); opacity: .75; transition: width .3s, opacity .3s; }
+.nf-side a:hover { color: #fff; }
+.nf-side a:hover::before { width: 5rem; opacity: 1; }
+.nf-clock { font-family: "Orbitron", monospace; font-size: .66rem; letter-spacing: .12em; color: var(--teal); }
+.nf-rise { animation: nf-rise .9s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes nf-rise { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: none } }
+
+@media (max-width: 640px) {
+  .nf-astro { left: 66%; top: -34%; width: 36%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nf *, .nf *::before, .nf *::after { animation: none !important; transition: none !important; }
+}

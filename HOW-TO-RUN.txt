@@ -1,0 +1,150 @@
+========================================================
+HOW TO RUN & HOST THIS PROJECT
+Developer Portfolio (React + Vite + Tailwind + TypeScript)
+========================================================
+
+WHAT'S IN THIS ZIP
+------------------
+This is the complete source code for the portfolio website.
+It contains everything: all pages, components, styles, images,
+configuration, and the Electron desktop-app wrapper (electron/).
+
+The only things NOT included are:
+- node_modules/ (installed dependencies - you install them yourself, see step 2)
+- dist/ (the production build - you generate it yourself, see step 3)
+This is normal; every real project ships this way.
+
+
+--------------------------------------------------------
+PART 1 - RUN IT ON YOUR PC (Development Mode)
+--------------------------------------------------------
+
+REQUIREMENT: Install Node.js first (version 18 or newer).
+Download from https://nodejs.org/ - choose the LTS version.
+
+Step 1. Extract this ZIP to any folder on your PC.
+
+Step 2. Open a terminal in that folder and install dependencies:
+
+        npm install
+
+   (One time only, downloads ~300MB. May take a few minutes.)
+
+Step 3. Start the development server:
+
+        npm run dev
+
+Step 4. Open your browser at the address it prints, usually:
+
+        http://localhost:8080
+
+You now see the site with live reload - edit any file in src/
+and the page updates automatically.
+
+
+--------------------------------------------------------
+PART 2 - BUILD A PRODUCTION COPY (for hosting)
+--------------------------------------------------------
+
+Step 1. In the project folder, run:
+
+        npm install      (skip if you already did it)
+        npm run build
+
+Step 2. When it finishes, a folder called  dist/  is created.
+        THAT folder is your finished website - static files only,
+        no server needed.
+
+To check the production build on your PC:
+
+        npm run preview
+
+(Typically serves at http://localhost:4173 )
+
+
+--------------------------------------------------------
+PART 3 - HOST IT ONLINE (pick ONE option)
+--------------------------------------------------------
+
+This is a static site, so any static host works.
+
+OPTION A - Netlify (easiest)
+  1. Go to https://app.netlify.com  and sign up (free).
+  2. Drag the  dist/  folder onto the Netlify dashboard.
+  3. Done - you get a live URL immediately.
+
+OPTION B - Vercel
+  1. Push this project to a GitHub repository.
+  2. Go to https://vercel.com , sign in with GitHub,
+     click "Add New Project" and select the repository.
+  3. Vercel auto-detects Vite. Click Deploy.
+  4. Every future push to GitHub redeploys automatically.
+
+OPTION C - GitHub Pages
+  1. Push the project to GitHub.
+  2. Run:  npm install --save-dev gh-pages
+  3. Add to package.json scripts:
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d dist"
+  4. Run:  npm run deploy
+  5. In GitHub repo Settings > Pages, choose the gh-pages branch.
+
+OPTION D - Any traditional web hosting (cPanel, FTP, etc.)
+  1. Run  npm run build  on your PC.
+  2. Upload EVERYTHING inside the  dist/  folder to your
+     host's public_html folder.
+  Note: for a subfolder use  npm run build:relative  (relative paths) so it works
+  in a subfolder too.
+
+OPTION E - Keep using Lovable
+  You can also publish straight from Lovable (Share -> Publish)
+  and connect a custom domain there.
+
+
+--------------------------------------------------------
+PART 4 - OPTIONAL: DESKTOP APP (Windows / Mac / Linux)
+--------------------------------------------------------
+
+The electron/ folder wraps the site as a desktop app.
+
+  1. npm install
+  2. npm run build
+  3. npx electron .          (runs the app locally)
+
+  To package installers/portable builds, you can add
+  @electron/packager or electron-builder on your own machine.
+
+
+--------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------
+
+- "npm is not recognized" -> Install Node.js from nodejs.org and
+  reopen the terminal.
+- Port 8080 already in use -> Vite will pick another port; use the
+  URL it prints.
+- Blank page after hosting -> Make sure you uploaded the CONTENTS
+  of dist/, not the dist folder itself as an extra level.
+- Anything else -> delete node_modules/, run  npm install  again.
+
+
+PROJECT TECH STACK
+------------------
+- React 18 + TypeScript + Vite 5
+- Tailwind CSS v3 + shadcn/ui components
+- Framer Motion-style CSS animations, glassmorphism design
+- Dark/light mode toggle, scroll-reveal animations, smooth scroll
+
+
+--------------------------------------------------------
+NOTES - 404 PAGE, PATHS AND ICONS
+--------------------------------------------------------
+* The custom 404 ("Houston, we have a small problem") shows for any unknown URL.
+  Netlify and Vercel are already set up for this (public/_redirects and vercel.json).
+  GitHub Pages: after  npm run build,  copy dist/index.html to dist/404.html.
+* npm run build           -> normal build for a website on its own domain (base "/").
+* npm run build:relative  -> use this for subfolder hosting and for the Electron
+                             desktop app (relative paths + hash routing).
+* Browser tab icon: replace public/favicon.svg, favicon.ico, favicon-32.png and
+  apple-touch-icon.png if you ever change the logo. Hard-refresh (Ctrl+Shift+R)
+  to see a new icon, browsers cache them hard.
