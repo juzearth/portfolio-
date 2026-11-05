@@ -15,7 +15,7 @@ export const profile = {
   role: "Software Engineer",
   location: "Kenya",
   tagline:
-    "I build billing systems, web apps and Android apps for Kenyan problems — M-Pesa payments, student services and everyday tools.",
+    "I build billing systems, web apps and Android apps for solving Kenyan problems; M-Pesa payments, student services and everyday tools.",
   email: "ochieng7ptr@gmail.com", // TODO: your real email
   phone: "", // TODO: optional, e.g. "+254 7XX XXX XXX" (leave empty to hide)
   github: "https://github.com/juzearth", // TODO
