@@ -16,7 +16,7 @@ export const profile = {
   location: "Kenya",
   tagline:
     "I build billing systems, web apps and Android apps for Kenyan problems — M-Pesa payments, student services and everyday tools.",
-  email: "peter@example.com", // TODO: your real email
+  email: "ochieng7ptr@gmail.com", // TODO: your real email
   phone: "", // TODO: optional, e.g. "+254 7XX XXX XXX" (leave empty to hide)
   github: "https://github.com/juzearth", // TODO
   linkedin: "https://www.linkedin.com/in/peter-ochieng-a86b57396?utm_source=share_via&utm_content=profile&utm_medium=member_android", // TODO
