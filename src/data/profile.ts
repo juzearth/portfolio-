@@ -38,7 +38,7 @@ export const about = {
 
 // "level" (0-100) fills the thin progress bar on each skill card. Adjust to how you rate yourself.
 export const skills = [
-  { category: "Frontend", level: 75, icon: "code", technologies: ["React", "JavaScript", "HTML & CSS", "Tailwind CSS"] },
+  { category: "Frontend", level: 93, icon: "code", technologies: ["React", "JavaScript", "HTML & CSS", "Tailwind CSS"] },
   { category: "Backend", level: 80, icon: "server", technologies: ["Node.js", "Express", "PHP", "REST APIs", "Session auth"] },
   { category: "Mobile", level: 70, icon: "phone", technologies: ["Kotlin", "Jetpack Compose", "Material 3", "Firebase"] },
   { category: "Data", level: 75, icon: "database", technologies: ["MySQL", "MySQLi", "Firebase Realtime DB"] },
