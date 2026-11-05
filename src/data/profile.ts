@@ -1,8 +1,8 @@
-// ============================================================
+  // ============================================================
 // EDIT THIS FILE to update the whole portfolio.
 // Anything marked TODO is a placeholder — replace it with your real details.
 // ============================================================
-
+  
 import autobillImg from "@/assets/project-autobill.jpg";
 import campusvoiceImg from "@/assets/project-campusvoice.jpg";
 import mysaverImg from "@/assets/project-mysaver.jpg";
@@ -15,7 +15,11 @@ export const profile = {
   role: "Software Engineer",
   location: "Kenya",
   tagline:
+<<<<<<< HEAD
     "I build billing systems, web apps and Android apps for solving Kenyan problems; M-Pesa payments, student services and everyday tools.",
+=======
+    "I build billing systems, web apps and Android apps for solving Kenyan problems-M-Pesa payments, student services and everyday tools.",
+>>>>>>> 511da804238876249e2ee0b8bcdd346f232439dd
   email: "ochieng7ptr@gmail.com", // TODO: your real email
   phone: "", // TODO: optional, e.g. "+254 7XX XXX XXX" (leave empty to hide)
   github: "https://github.com/juzearth", // TODO
