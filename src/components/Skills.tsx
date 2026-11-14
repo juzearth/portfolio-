@@ -1,4 +1,4 @@
-import { Code, Smartphone, Database, Server, Wallet, GitBranch } from "lucide-react";
+import { Code, Smartphone, Database, Server, Wallet, GitBranch, HardHat } from "lucide-react";
 import { skills } from "@/data/profile";
 
 const icons = {
@@ -8,6 +8,7 @@ const icons = {
   database: Database,
   wallet: Wallet,
   git: GitBranch,
+  security: HardHat, // Using GitBranch as a placeholder for security icon
 };
 
 const Skills = () => (

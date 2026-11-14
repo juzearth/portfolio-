@@ -44,7 +44,7 @@ export const skills = [
   { category: "Data", level: 75, icon: "database", technologies: ["MySQL", "MySQLi","MongoDB", "Firebase Realtime DB"] },
   { category: "Payments & APIs", level: 65, icon: "wallet", technologies: ["M-Pesa Daraja (STK Push)", "Africa's Talking SMS"] },
   { category: "Tooling & DevOps", level: 55, icon: "git", technologies: ["Git & GitHub", "GitHub Actions", "PM2", "VPS deployment"] },
-  { category: "System Security", level: 55, icon: "git", technologies: ["JWT & OAuth2", "CORS & Helmet", "Role-Based Access Control", "Input Validation & Sanitization", "Auth & Session Security","Data Encryption"] },
+  { category: "System Security", level: 55, icon: "security", technologies: ["JWT & OAuth2", "CORS & Helmet", "Role-Based Access Control", "Input Validation & Sanitization", "Auth & Session Security","Data Encryption"] },
 ] as const;
 
 export const projects = [
