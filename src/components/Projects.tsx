@@ -51,7 +51,7 @@ const Projects = () => {
             {featured.map((p, index) => (
               <Card
                 key={p.title}
-                className="glass-card !bg-transparent !border-transparent !shadow-none group reveal flex flex-col"
+                className="glass-card group reveal flex flex-col !bg-white/85 !border-primary/15 !shadow-xl shadow-primary/20 hover:!shadow-2xl hover:shadow-primary/30"
                 style={{ "--reveal-delay": `${index * 0.15}s` } as React.CSSProperties}
               >
                 <div className="relative overflow-hidden rounded-t-2xl">
@@ -86,7 +86,7 @@ const Projects = () => {
             {others.map((p, index) => (
               <Card
                 key={p.title}
-                className="glass-card !bg-transparent !border-transparent !shadow-none group reveal"
+                className="glass-card group reveal !bg-white/85 !border-primary/15 !shadow-xl shadow-primary/20 hover:!shadow-2xl hover:shadow-primary/30"
                 style={{ "--reveal-delay": `${(index + 2) * 0.12}s` } as React.CSSProperties}
               >
                 <div className="md:flex">

@@ -1,4 +1,5 @@
-import { GraduationCap, Target, MapPin, Download } from "lucide-react";
+//import { GraduationCap, Target, MapPin, Download } from "lucide-react";
+import { GraduationCap, Target, MapPin, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { education, focus } from "@/data/profile";
 
@@ -8,12 +9,12 @@ const Resume = () => (
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 md:mb-16 reveal">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Resume</h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-7">Download my one-page resume or read the highlights below.</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-7">View my one-page resume or read the highlights below.</p>
           <Button size="lg" asChild className="bg-gradient-to-r from-primary to-accent hover:scale-105 animate-pulse-glow transition-transform duration-300 text-primary-foreground">
-            <a href="./Peter-Resume.pdf" download="Peter-Resume.pdf">
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume (PDF)
-            </a>
+            <a href={`${import.meta.env.BASE_URL}Peter-Resume.pdf`} target="_blank" rel="noopener noreferrer">
+              <Eye className="w-5 h-5 mr-2" />
+              View Resume
+              </a>
           </Button>
         </div>
         <div className="grid gap-8 md:gap-10">

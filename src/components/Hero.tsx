@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ChevronDown, Download } from "lucide-react";
+//import { Github, Linkedin, Mail, ChevronDown, Download } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Eye } from "lucide-react";
 import { profile } from "@/data/profile";
 
 const Hero = () => {
@@ -68,10 +69,10 @@ const Hero = () => {
               Contact me
             </Button>
             <Button size="lg" variant="outline" asChild className="!bg-white/10 backdrop-blur-md border-white/60 text-white hover:!bg-white/20 hover:scale-105 transition-transform duration-300 font-semibold">
-              <a href="./Peter-Resume.pdf" download="Peter-Resume.pdf">
-                <Download className="w-5 h-5 mr-2" />
-                Resume
-              </a>
+             <a href={`${import.meta.env.BASE_URL}Peter-Resume.pdf`} target="_blank" rel="noopener noreferrer">
+               <Eye className="w-5 h-5 mr-2" />
+                View Resume
+                </a>
             </Button>
           </div>
 
