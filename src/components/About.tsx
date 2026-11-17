@@ -11,7 +11,7 @@ const About = () => (
             <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto animate-float-slow">
               <div aria-hidden className="glow-ring absolute -inset-3 rounded-[2rem] animate-spin-slow" />
               <div className="glass rounded-3xl p-3 relative">
-                <img src={profilePhoto} alt={`${profile.name}, ${profile.role}`} className="rounded-2xl w-full aspect-square object-cover" />
+                <img src={profilePhoto} alt={`${profile.name}, ${profile.role}`} className="rounded-2xl w-full aspect-[4/5] object-cover object-top" />
                 <div className="absolute inset-3 rounded-2xl bg-gradient-to-t from-primary/25 to-transparent pointer-events-none" />
               </div>
             </div>
